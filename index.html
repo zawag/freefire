@@ -1,0 +1,1015 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head><script>if(navigator.userAgent.match(/MSIE|Internet Explorer/i)||navigator.userAgent.match(/Trident\/7\..*?rv:11/i)){var href=document.location.href;if(!href.match(/[?&]nowprocket/)){if(href.indexOf("?")==-1){if(href.indexOf("#")==-1){document.location.href=href+"?nowprocket=1"}else{document.location.href=href.replace("#","?nowprocket=1#")}}else{if(href.indexOf("#")==-1){document.location.href=href+"&nowprocket=1"}else{document.location.href=href.replace("#","&nowprocket=1#")}}}}</script><script>class RocketLazyLoadScripts{constructor(e){this.triggerEvents=e,this.eventOptions={passive:!0},this.userEventListener=this.triggerListener.bind(this),this.delayedScripts={normal:[],async:[],defer:[]},this.allJQueries=[]}_addUserInteractionListener(e){this.triggerEvents.forEach((t=>window.addEventListener(t,e.userEventListener,e.eventOptions)))}_removeUserInteractionListener(e){this.triggerEvents.forEach((t=>window.removeEventListener(t,e.userEventListener,e.eventOptions)))}triggerListener(){this._removeUserInteractionListener(this),this._loadEverythingNow()}async _loadEverythingNow(){this._handleDocumentWrite(),this._registerAllDelayedScripts(),this._preloadAllScripts(),await this._loadScriptsFromList(this.delayedScripts.normal),await this._loadScriptsFromList(this.delayedScripts.defer),await this._loadScriptsFromList(this.delayedScripts.async),await this._triggerDOMContentLoaded(),await this._triggerWindowLoad(),window.dispatchEvent(new Event("rocket-allScriptsLoaded"))}_registerAllDelayedScripts(){document.querySelectorAll("script[type=rocketlazyloadscript]").forEach((e=>{e.hasAttribute("src")?e.hasAttribute("async")&&!1!==e.async?this.delayedScripts.async.push(e):e.hasAttribute("defer")&&!1!==e.defer||"module"===e.getAttribute("data-rocket-type")?this.delayedScripts.defer.push(e):this.delayedScripts.normal.push(e):this.delayedScripts.normal.push(e)}))}async _transformScript(e){return await this._requestAnimFrame(),new Promise((t=>{var n=document.createElement("script");[...e.attributes].forEach((e=>{let t=e.nodeName;"type"!==t&&("data-rocket-type"===t&&(t="type"),n.setAttribute(t,e.nodeValue))})),e.hasAttribute("src")?(n.addEventListener("load",t),n.addEventListener("error",t)):(n.text=e.text,t()),e.parentNode.replaceChild(n,e)}))}async _loadScriptsFromList(e){const t=e.shift();return t?(await this._transformScript(t),this._loadScriptsFromList(e)):Promise.resolve()}_preloadAllScripts(){var e=document.createDocumentFragment();[...this.delayedScripts.normal,...this.delayedScripts.defer,...this.delayedScripts.async].forEach((t=>{const n=t.getAttribute("src");if(n){const t=document.createElement("link");t.href=n,t.rel="preload",t.as="script",e.appendChild(t)}})),document.head.appendChild(e)}_delayEventListeners(){let e={};function t(t,n){!function(t){function n(n){return e[t].eventsToRewrite.indexOf(n)>=0?"rocket-"+n:n}e[t]||(e[t]={originalFunctions:{add:t.addEventListener,remove:t.removeEventListener},eventsToRewrite:[]},t.addEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.add.apply(t,arguments)},t.removeEventListener=function(){arguments[0]=n(arguments[0]),e[t].originalFunctions.remove.apply(t,arguments)})}(t),e[t].eventsToRewrite.push(n)}function n(e,t){const n=e[t];Object.defineProperty(e,t,{get:n||function(){},set:n=>{e["rocket"+t]=n}})}t(document,"DOMContentLoaded"),t(window,"DOMContentLoaded"),t(window,"load"),t(window,"pageshow"),t(document,"readystatechange"),n(document,"onreadystatechange"),n(window,"onload"),n(window,"onpageshow")}_delayJQueryReady(e){let t;Object.defineProperty(window,"jQuery",{get:()=>t,set(n){if(n&&n.fn&&!e.allJQueries.includes(n)){n.fn.ready=n.fn.init.prototype.ready=function(t){e.domReadyFired?t.bind(document)(n):document.addEventListener("rocket-DOMContentLoaded",(()=>t.bind(document)(n)))};const t=n.fn.on;n.fn.on=n.fn.init.prototype.on=function(){if(this[0]===window){function e(e){return e.split(" ").map((e=>"load"===e?"rocket-load":e)).join(" ")}"string"==typeof arguments[0]||arguments[0]instanceof String?arguments[0]=e(arguments[0]):"object"==typeof arguments[0]&&Object.keys(arguments[0]).forEach((t=>{delete Object.assign(arguments[0],{[e(t)]:arguments[0][t]})[t]}))}return t.apply(this,arguments),this},e.allJQueries.push(n)}t=n}})}async _triggerDOMContentLoaded(){this.domReadyFired=!0,await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-DOMContentLoaded")),await this._requestAnimFrame(),document.dispatchEvent(new Event("rocket-readystatechange")),await this._requestAnimFrame(),document.rocketonreadystatechange&&document.rocketonreadystatechange()}async _triggerWindowLoad(){await this._requestAnimFrame(),window.dispatchEvent(new Event("rocket-load")),await this._requestAnimFrame(),window.rocketonload&&window.rocketonload(),await this._requestAnimFrame(),this.allJQueries.forEach((e=>e(window).trigger("rocket-load"))),window.dispatchEvent(new Event("rocket-pageshow")),await this._requestAnimFrame(),window.rocketonpageshow&&window.rocketonpageshow()}_handleDocumentWrite(){const e=new Map;document.write=document.writeln=function(t){const n=document.currentScript,r=document.createRange(),i=n.parentElement;let o=e.get(n);void 0===o&&(o=n.nextSibling,e.set(n,o));const a=document.createDocumentFragment();r.setStart(a,0),a.appendChild(r.createContextualFragment(t)),i.insertBefore(a,o)}}async _requestAnimFrame(){return new Promise((e=>requestAnimationFrame(e)))}static run(){const e=new RocketLazyLoadScripts(["keydown","mouseover","touchmove","touchstart","wheel"]);e._delayEventListeners(),e._delayJQueryReady(e),e._addUserInteractionListener(e)}}RocketLazyLoadScripts.run();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="https://gmpg.org/xfn/11">
+<link rel="stylesheet" href="css/all.min.css">
+
+<title>شـحن جواهر فري فاير مجانًا | جواهر فري فاير مجانية 100% | اشـحن جواهر فري فاير مـجانًا الآن</title><style id="rocket-critical-css">a,body,div,h2,html,p,span{border:0;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;outline:0;padding:0;vertical-align:baseline}html{-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}article,header,main,section{display:block}a{background-color:transparent}a,a:visited{text-decoration:none}img{border:0}svg:not(:root){overflow:hidden}.ast-container{margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px}.ast-container::after{content:"";display:table;clear:both}@media (min-width:544px){.ast-container{max-width:100%}}@media (min-width:768px){.ast-container{max-width:100%}}@media (min-width:992px){.ast-container{max-width:100%}}@media (min-width:1200px){.ast-container{max-width:100%}}h2{clear:both}.entry-content h2,h2{color:#808285;font-size:1.7em;line-height:1.3}html{box-sizing:border-box}*,:after,:before{box-sizing:inherit}body{color:#808285;background:#fff;font-style:normal}img{height:auto;max-width:100%}a{color:#4169e1}.screen-reader-text{border:0;clip:rect(1px,1px,1px,1px);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;word-wrap:normal!important}#primary:after,#primary:before,.ast-container:after,.ast-container:before,.clear:after,.clear:before,.site-content:after,.site-content:before,.site-header:after,.site-header:before,.site-main:after,.site-main:before{content:"";display:table}#primary:after,.ast-container:after,.clear:after,.site-content:after,.site-header:after,.site-main:after{clear:both}body{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body:not(.logged-in){position:relative}#page{position:relative}a{text-decoration:none}img{vertical-align:middle}.entry-content h2{margin-bottom:20px}p{margin-bottom:1.75em}.site .skip-link{background-color:#f1f1f1;box-shadow:0 0 1px 1px rgba(0,0,0,.2);color:#21759b;display:block;font-family:Montserrat,"Helvetica Neue",sans-serif;font-size:14px;font-weight:700;left:-9999em;outline:0;padding:15px 23px 14px;text-decoration:none;text-transform:none;top:-9999em}body{line-height:1.85714285714286}body{background-color:#fff}#page{display:block}#primary{display:block;position:relative;float:left;width:100%}#primary{margin:4em 0}.ast-page-builder-template .site-content>.ast-container{max-width:100%;padding:0}.ast-page-builder-template .site-content #primary{padding:0;margin:0}.ast-page-builder-template .entry-header{margin-top:4em;margin-left:auto;margin-right:auto;padding-left:20px;padding-right:20px}.ast-page-builder-template .entry-header.ast-header-without-markup{margin-top:0;margin-bottom:0}.main-header-bar{z-index:1}.header-main-layout-1 .main-header-container{align-items:stretch}.site-header{z-index:99;position:relative}.main-header-container{position:relative}.main-header-bar-wrap{position:relative}.main-header-bar{background-color:#fff;border-bottom-color:#eaeaea;border-bottom-style:solid}.main-header-bar{margin-left:auto;margin-right:auto}.site-branding{line-height:1;align-self:center}.main-header-bar{z-index:4;position:relative;line-height:4}.ast-site-identity{padding:1em 0}.entry-content>:last-child{margin-bottom:0}body{overflow-x:hidden}.page .entry-header{margin-bottom:1.5em}.ast-single-post .entry-header.ast-header-without-markup{margin-bottom:0}.entry-header{margin-bottom:1em;word-wrap:break-word}.entry-content{word-wrap:break-word}.entry-content p{margin-bottom:1.6em}.ast-flex{-js-display:flex;display:flex;flex-wrap:wrap}.elementor-column-gap-default>.elementor-row>.elementor-column>.elementor-element-populated{padding:10px}@media (max-width:767px){.elementor-column{width:100%}}.screen-reader-text{position:absolute;top:-10000em;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);border:0}.elementor-clearfix:after{content:"";display:block;clear:both;width:0;height:0}.elementor{-webkit-hyphens:manual;-ms-hyphens:manual;hyphens:manual}.elementor *,.elementor :after,.elementor :before{-webkit-box-sizing:border-box;box-sizing:border-box}.elementor a{-webkit-box-shadow:none;box-shadow:none;text-decoration:none}.elementor img{height:auto;max-width:100%;border:none;-webkit-border-radius:0;border-radius:0;-webkit-box-shadow:none;box-shadow:none}.elementor .elementor-background-overlay{height:100%;width:100%;top:0;left:0;position:absolute}.elementor-invisible{visibility:hidden}.elementor-align-center{text-align:center}.elementor-align-center .elementor-button{width:auto}:root{--page-title-display:block}.elementor-section{position:relative}.elementor-section .elementor-container{display:-webkit-box;display:-ms-flexbox;display:flex;margin-right:auto;margin-left:auto;position:relative}@media (max-width:1024px){.elementor-section .elementor-container{-ms-flex-wrap:wrap;flex-wrap:wrap}}.elementor-section.elementor-section-boxed>.elementor-container{max-width:1140px}.elementor-row{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex}@media (max-width:1024px){.elementor-row{-ms-flex-wrap:wrap;flex-wrap:wrap}}.elementor-widget-wrap{position:relative;width:100%;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:start;align-content:flex-start}.elementor:not(.elementor-bc-flex-widget) .elementor-widget-wrap{display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-widget-wrap>.elementor-element{width:100%}.elementor-widget{position:relative}.elementor-widget:not(:last-child){margin-bottom:20px}.elementor-column{min-height:1px}.elementor-column,.elementor-column-wrap{position:relative;display:-webkit-box;display:-ms-flexbox;display:flex}.elementor-column-wrap{width:100%}@media (min-width:768px){.elementor-column.elementor-col-100{width:100%}}@media (max-width:767px){.elementor-column{width:100%}}.elementor-button{display:inline-block;line-height:1;background-color:#818a91;font-size:15px;padding:12px 24px;-webkit-border-radius:3px;border-radius:3px;color:#fff;fill:#fff;text-align:center}.elementor-button:visited{color:#fff}.elementor-button-content-wrapper{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}.elementor-button-text{-webkit-box-flex:1;-ms-flex-positive:1;flex-grow:1;-webkit-box-ordinal-group:11;-ms-flex-order:10;order:10;display:inline-block}.elementor-button.elementor-size-md{font-size:16px;padding:15px 30px;-webkit-border-radius:4px;border-radius:4px}.elementor-button span{text-decoration:inherit}.elementor-heading-title{padding:0;margin:0;line-height:1}.elementor-widget-image{text-align:center}.elementor-widget-image img{vertical-align:middle;display:inline-block}.elementor-shape{overflow:hidden;position:absolute;left:0;width:100%;line-height:0;direction:ltr}.elementor-shape-bottom{bottom:-1px}.elementor-shape-bottom:not([data-negative=true]) svg{z-index:-1}.elementor-shape[data-negative=false].elementor-shape-bottom{-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}.elementor-shape svg{display:block;width:calc(100% + 1.3px);position:relative;left:50%;-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%);transform:translateX(-50%)}.elementor-shape .elementor-shape-fill{fill:#fff;-webkit-transform-origin:center;-ms-transform-origin:center;transform-origin:center;-webkit-transform:rotateY(0deg);transform:rotateY(0deg)}.elementor-kit-435{--e-global-color-primary:#6EC1E4;--e-global-color-secondary:#54595F;--e-global-color-text:#7A7A7A;--e-global-color-accent:#61CE70;--e-global-typography-primary-font-family:"Roboto";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Roboto Slab";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Roboto";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Roboto";--e-global-typography-accent-font-weight:500}.elementor-section.elementor-section-boxed>.elementor-container{max-width:1140px}.elementor-widget:not(:last-child){margin-bottom:20px}@media (max-width:1024px){.elementor-section.elementor-section-boxed>.elementor-container{max-width:1024px}}@media (max-width:767px){.elementor-section.elementor-section-boxed>.elementor-container{max-width:767px}}.elementor-441 .elementor-element.elementor-element-2927674f>.elementor-container{max-width:803px}.elementor-441 .elementor-element.elementor-element-2927674f:not(.elementor-motion-effects-element-type-background){background-image:url("https://jawahirfreefire.mobi/wp-content/uploads/2020/10/019.jpg");background-position:center left;background-repeat:no-repeat;background-size:cover}.elementor-441 .elementor-element.elementor-element-2927674f>.elementor-background-overlay{background-color:transparent;background-image:linear-gradient(70deg,rgba(37,163,186,0) 0%,#24A9E200 100%);opacity:0.39}.elementor-441 .elementor-element.elementor-element-2927674f{padding:10px 0px 280px 0px}.elementor-441 .elementor-element.elementor-element-2927674f>.elementor-shape-bottom .elementor-shape-fill{fill:#B5A337}.elementor-441 .elementor-element.elementor-element-2927674f>.elementor-shape-bottom svg{width:calc(100% + 1.3px);height:221px;transform:translateX(-50%) rotateY(180deg)}.elementor-441 .elementor-element.elementor-element-3e04c1bd img{width:19%}.elementor-441 .elementor-element.elementor-element-4584e407 .elementor-spacer-inner{height:20px}.elementor-441 .elementor-element.elementor-element-2ca19c15{text-align:center}.elementor-441 .elementor-element.elementor-element-2ca19c15 .elementor-heading-title{color:#EBB014;font-family:"Changa",Sans-serif;font-size:40px;text-shadow:8px 5px 24px rgba(255,255,0,0.05)}.elementor-441 .elementor-element.elementor-element-4d4f430c .elementor-spacer-inner{height:10px}.elementor-441 .elementor-element.elementor-element-17c7ab7c{text-align:center;color:#E5E5E5;font-family:"Changa",Sans-serif;font-size:20px;font-weight:bold}.elementor-441 .elementor-element.elementor-element-17c7ab7c>.elementor-widget-container{margin:11px 11px 11px 11px;background-color:#04051157}.elementor-441 .elementor-element.elementor-element-1ec93eb9 .elementor-button{font-family:"Changa",Sans-serif;font-size:25px;font-weight:bold;text-decoration:none;line-height:0.8em;text-shadow:0px 0px 10px rgba(0,0,0,0.3);fill:#000000;color:#000000;background-color:#EBB014;border-radius:20px 20px 20px 20px;box-shadow:0px 0px 10px 0px #000000}.elementor-441 .elementor-element.elementor-element-1ec93eb9>.elementor-widget-container{padding:0px 0px 030px 0px}@media (max-width:1024px){.elementor-441 .elementor-element.elementor-element-2927674f>.elementor-shape-bottom svg{height:198px}.elementor-441 .elementor-element.elementor-element-2927674f{padding:75px 50px 200px 50px}}@media (max-width:767px){.elementor-441 .elementor-element.elementor-element-2927674f:not(.elementor-motion-effects-element-type-background){background-position:center center}.elementor-441 .elementor-element.elementor-element-2927674f>.elementor-shape-bottom svg{height:170px}.elementor-441 .elementor-element.elementor-element-2927674f{padding:65px 25px 175px 25px}.elementor-441 .elementor-element.elementor-element-3e04c1bd img{width:52%}}</style><link rel="preload" href="https://fonts.googleapis.com/css?family=Changa%3A400%2C%7CMontserrat%3A700%2C%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CChanga%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" /><link rel="preload" href="https://jawahirfreefire.mobi/wp-content/cache/min/1/727bd74e3779d8c64113de3526e8bde1.css" data-rocket-async="style" as="style" onload="this.onload=null;this.rel='stylesheet'" media="all" data-minify="1" />
+<meta name='robots' content='max-image-preview:large' />
+
+<!-- This site is optimized with the Yoast SEO Premium plugin v13.5 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="إذا كنت تبحث عن طريقة مجانية ل شحن جواهر فري فاير مجانا فأنت في المكان الصحيح ،هده هي فرصتك لشحن آلاف جواهر فري فايرعلى فري فاير مـجانًا الآن الحق لا تفوت."/>
+<meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1"/>
+<link rel="canonical" href="https://jawahirfreefire.mobi/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="website" />
+<meta property="og:title" content="شـحن جواهر فري فاير مجانًا | جواهر فري فاير مجانية 100% | اشـحن جواهر فري فاير مـجانًا الآن" />
+<meta property="og:description" content="إذا كنت تبحث عن طريقة مجانية ل شحن جواهر فري فاير مجانا فأنت في المكان الصحيح ،هده هي فرصتك لشحن آلاف جواهر فري فايرعلى فري فاير مـجانًا الآن الحق لا تفوت." />
+<meta property="og:url" content="https://jawahirfreefire.mobi/" />
+<meta property="og:site_name" content="شـحن جواهر فري فاير مجانًا | جواهر فري فاير مجانية 100% | اشـحن جواهر فري فاير مـجانًا الآن" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="إذا كنت تبحث عن طريقة مجانية ل شحن جواهر فري فاير مجانا فأنت في المكان الصحيح ،هده هي فرصتك لشحن آلاف جواهر فري فايرعلى فري فاير مـجانًا الآن الحق لا تفوت." />
+<meta name="twitter:title" content="شـحن جواهر فري فاير مجانًا | جواهر فري فاير مجانية 100% | اشـحن جواهر فري فاير مـجانًا الآن" />
+<meta name="twitter:image" content="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://jawahirfreefire.mobi/#website","url":"https://jawahirfreefire.mobi/","name":"\u0634\u0640\u062d\u0646 \u062c\u0648\u0627\u0647\u0631 \u0641\u0631\u064a \u0641\u0627\u064a\u0631 \u0645\u062c\u0627\u0646\u064b\u0627 | \u062c\u0648\u0627\u0647\u0631 \u0641\u0631\u064a \u0641\u0627\u064a\u0631 \u0645\u062c\u0627\u0646\u064a\u0629 100% | \u0627\u0634\u0640\u062d\u0646 \u062c\u0648\u0627\u0647\u0631 \u0641\u0631\u064a \u0641\u0627\u064a\u0631 \u0645\u0640\u062c\u0627\u0646\u064b\u0627 \u0627\u0644\u0622\u0646","inLanguage":"en-US","potentialAction":[{"@type":"SearchAction","target":"https://jawahirfreefire.mobi/?s={search_term_string}","query-input":"required name=search_term_string"}]},{"@type":"ImageObject","@id":"https://jawahirfreefire.mobi/#primaryimage","inLanguage":"en-US","url":"https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png","width":512,"height":512,"caption":"jawgo"},{"@type":"WebPage","@id":"https://jawahirfreefire.mobi/#webpage","url":"https://jawahirfreefire.mobi/","name":"\u0634\u0640\u062d\u0646 \u062c\u0648\u0627\u0647\u0631 \u0641\u0631\u064a \u0641\u0627\u064a\u0631 \u0645\u062c\u0627\u0646\u064b\u0627 | \u062c\u0648\u0627\u0647\u0631 \u0641\u0631\u064a \u0641\u0627\u064a\u0631 \u0645\u062c\u0627\u0646\u064a\u0629 100% | \u0627\u0634\u0640\u062d\u0646 \u062c\u0648\u0627\u0647\u0631 \u0641\u0631\u064a \u0641\u0627\u064a\u0631 \u0645\u0640\u062c\u0627\u0646\u064b\u0627 \u0627\u0644\u0622\u0646","isPartOf":{"@id":"https://jawahirfreefire.mobi/#website"},"inLanguage":"en-US","primaryImageOfPage":{"@id":"https://jawahirfreefire.mobi/#primaryimage"},"datePublished":"2018-11-26T12:45:27+00:00","dateModified":"2022-08-24T11:18:44+00:00","description":"\u0625\u0630\u0627 \u0643\u0646\u062a \u062a\u0628\u062d\u062b \u0639\u0646 \u0637\u0631\u064a\u0642\u0629 \u0645\u062c\u0627\u0646\u064a\u0629 \u0644 \u0634\u062d\u0646 \u062c\u0648\u0627\u0647\u0631 \u0641\u0631\u064a \u0641\u0627\u064a\u0631 \u0645\u062c\u0627\u0646\u0627 \u0641\u0623\u0646\u062a \u0641\u064a \u0627\u0644\u0645\u0643\u0627\u0646 \u0627\u0644\u0635\u062d\u064a\u062d \u060c\u0647\u062f\u0647 \u0647\u064a \u0641\u0631\u0635\u062a\u0643 \u0644\u0634\u062d\u0646 \u0622\u0644\u0627\u0641 \u062c\u0648\u0627\u0647\u0631 \u0641\u0631\u064a \u0641\u0627\u064a\u0631\u0639\u0644\u0649 \u0641\u0631\u064a \u0641\u0627\u064a\u0631 \u0645\u0640\u062c\u0627\u0646\u064b\u0627 \u0627\u0644\u0622\u0646 \u0627\u0644\u062d\u0642 \u0644\u0627 \u062a\u0641\u0648\u062a.","potentialAction":[{"@type":"ReadAction","target":["https://jawahirfreefire.mobi/"]}]}]}</script>
+<!-- / Yoast SEO Premium plugin. -->
+
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel="alternate" type="application/rss+xml" title="شـحن جواهر فري فاير مجانًا | جواهر فري فاير مجانية 100% | اشـحن جواهر فري فاير مـجانًا الآن &raquo; Feed" href="https://jawahirfreefire.mobi/feed/" />
+<link rel="alternate" type="application/rss+xml" title="شـحن جواهر فري فاير مجانًا | جواهر فري فاير مجانية 100% | اشـحن جواهر فري فاير مـجانًا الآن &raquo; Comments Feed" href="https://jawahirfreefire.mobi/comments/feed/" />
+<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 0.07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	
+<style id='astra-theme-css-inline-css'>
+html{font-size:106.25%;}a,.page-title{color:#d94948;}a:hover,a:focus{color:#ffffff;}body,button,input,select,textarea,.ast-button,.ast-custom-button{font-family:'Changa',sans-serif;font-weight:400;font-size:17px;font-size:1rem;text-transform:none;}blockquote{color:rgba(1,22,39,0.75);}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.site-title,.site-title a{font-family:'Montserrat',sans-serif;font-weight:700;}.site-title{font-size:28px;font-size:1.6470588235294rem;}header .site-logo-img .custom-logo-link img{max-width:84px;}.astra-logo-svg{width:84px;}.ast-archive-description .ast-archive-title{font-size:40px;font-size:2.3529411764706rem;}.site-header .site-description{font-size:16px;font-size:0.94117647058824rem;}.entry-title{font-size:30px;font-size:1.7647058823529rem;}.comment-reply-title{font-size:28px;font-size:1.6470588235294rem;}.ast-comment-list #cancel-comment-reply-link{font-size:17px;font-size:1rem;}h1,.entry-content h1{font-size:70px;font-size:4.1176470588235rem;font-family:'Montserrat',sans-serif;line-height:1.2;text-transform:uppercase;}h2,.entry-content h2{font-size:34px;font-size:2rem;font-family:'Montserrat',sans-serif;line-height:1.4;text-transform:none;}h3,.entry-content h3{font-size:23px;font-size:1.3529411764706rem;font-family:'Montserrat',sans-serif;line-height:1.5;text-transform:none;}h4,.entry-content h4{font-size:16px;font-size:0.94117647058824rem;line-height:1.5;}h5,.entry-content h5{font-size:14px;font-size:0.82352941176471rem;line-height:1.5;}h6,.entry-content h6{font-size:12px;font-size:0.70588235294118rem;line-height:1.5;}.ast-single-post .entry-title,.page-title{font-size:30px;font-size:1.7647058823529rem;}#secondary,#secondary button,#secondary input,#secondary select,#secondary textarea{font-size:17px;font-size:1rem;}::selection{background-color:#d94948;color:#ffffff;}body,h1,.entry-title a,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.wc-block-grid__product-title{color:rgba(1,22,39,0.75);}.tagcloud a:hover,.tagcloud a:focus,.tagcloud a.current-item{color:#ffffff;border-color:#d94948;background-color:#d94948;}.main-header-menu .menu-link,.ast-header-custom-item a{color:rgba(1,22,39,0.75);}.main-header-menu .menu-item:hover > .menu-link,.main-header-menu .menu-item:hover > .ast-menu-toggle,.main-header-menu .ast-masthead-custom-menu-items a:hover,.main-header-menu .menu-item.focus > .menu-link,.main-header-menu .menu-item.focus > .ast-menu-toggle,.main-header-menu .current-menu-item > .menu-link,.main-header-menu .current-menu-ancestor > .menu-link,.main-header-menu .current-menu-item > .ast-menu-toggle,.main-header-menu .current-menu-ancestor > .ast-menu-toggle{color:#d94948;}input:focus,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="reset"]:focus,input[type="search"]:focus,textarea:focus{border-color:#d94948;}input[type="radio"]:checked,input[type=reset],input[type="checkbox"]:checked,input[type="checkbox"]:hover:checked,input[type="checkbox"]:focus:checked,input[type=range]::-webkit-slider-thumb{border-color:#d94948;background-color:#d94948;box-shadow:none;}.site-footer a:hover + .post-count,.site-footer a:focus + .post-count{background:#d94948;border-color:#d94948;}.ast-small-footer{color:rgba(255,255,255,0.5);}.ast-small-footer > .ast-footer-overlay{background-color:#011627;}.ast-small-footer a{color:#ffffff;}.ast-small-footer a:hover{color:#dd3333;}.footer-adv .footer-adv-overlay{border-top-style:solid;border-top-color:#7a7a7a;}.ast-comment-meta{line-height:1.666666667;font-size:14px;font-size:0.82352941176471rem;}.single .nav-links .nav-previous,.single .nav-links .nav-next,.single .ast-author-details .author-title,.ast-comment-meta{color:#d94948;}.entry-meta,.entry-meta *{line-height:1.45;color:#d94948;}.entry-meta a:hover,.entry-meta a:hover *,.entry-meta a:focus,.entry-meta a:focus *{color:#ffffff;}.ast-404-layout-1 .ast-404-text{font-size:200px;font-size:11.764705882353rem;}.widget-title{font-size:24px;font-size:1.4117647058824rem;color:rgba(1,22,39,0.75);}#cat option,.secondary .calendar_wrap thead a,.secondary .calendar_wrap thead a:visited{color:#d94948;}.secondary .calendar_wrap #today,.ast-progress-val span{background:#d94948;}.secondary a:hover + .post-count,.secondary a:focus + .post-count{background:#d94948;border-color:#d94948;}.calendar_wrap #today > a{color:#ffffff;}.ast-pagination a,.page-links .page-link,.single .post-navigation a{color:#d94948;}.ast-pagination a:hover,.ast-pagination a:focus,.ast-pagination > span:hover:not(.dots),.ast-pagination > span.current,.page-links > .page-link,.page-links .page-link:hover,.post-navigation a:hover{color:#ffffff;}.ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle{background:transparent;color:#ffffff;}.ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle{background:transparent;border:1px solid #ffffff;color:#ffffff;}.ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle{background:#ffffff;color:#000000;}.ast-header-break-point .main-header-bar .ast-button-wrap .menu-toggle{border-radius:0px;}@media (max-width:782px){.entry-content .wp-block-columns .wp-block-column{margin-left:0px;}}@media (max-width:921px){#secondary.secondary{padding-top:0;}.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single{padding:1.5em 2.14em;}.ast-separate-container #primary,.ast-separate-container #secondary{padding:1.5em 0;}.ast-separate-container.ast-right-sidebar #secondary{padding-left:1em;padding-right:1em;}.ast-separate-container.ast-two-container #secondary{padding-left:0;padding-right:0;}.ast-page-builder-template .entry-header #secondary{margin-top:1.5em;}.ast-page-builder-template #secondary{margin-top:1.5em;}#primary,#secondary{padding:1.5em 0;margin:0;}.ast-left-sidebar #content > .ast-container{display:flex;flex-direction:column-reverse;width:100%;}.ast-author-box img.avatar{margin:20px 0 0 0;}.ast-pagination{padding-top:1.5em;text-align:center;}.ast-pagination .next.page-numbers{display:inherit;float:none;}}@media (max-width:921px){.ast-page-builder-template.ast-left-sidebar #secondary{padding-right:20px;}.ast-page-builder-template.ast-right-sidebar #secondary{padding-left:20px;}.ast-right-sidebar #primary{padding-right:0;}.ast-right-sidebar #secondary{padding-left:0;}.ast-left-sidebar #primary{padding-left:0;}.ast-left-sidebar #secondary{padding-right:0;}.ast-pagination .prev.page-numbers{padding-left:.5em;}.ast-pagination .next.page-numbers{padding-right:.5em;}}@media (min-width:922px){.ast-separate-container.ast-right-sidebar #primary,.ast-separate-container.ast-left-sidebar #primary{border:0;}.ast-separate-container.ast-right-sidebar #secondary,.ast-separate-container.ast-left-sidebar #secondary{border:0;margin-left:auto;margin-right:auto;}.ast-separate-container.ast-two-container #secondary .widget:last-child{margin-bottom:0;}.ast-separate-container .ast-comment-list li .comment-respond{padding-left:2.66666em;padding-right:2.66666em;}.ast-author-box{-js-display:flex;display:flex;}.ast-author-bio{flex:1;}.error404.ast-separate-container #primary,.search-no-results.ast-separate-container #primary{margin-bottom:4em;}}@media (min-width:922px){.ast-right-sidebar #primary{border-right:1px solid #eee;}.ast-right-sidebar #secondary{border-left:1px solid #eee;margin-left:-1px;}.ast-left-sidebar #primary{border-left:1px solid #eee;}.ast-left-sidebar #secondary{border-right:1px solid #eee;margin-right:-1px;}.ast-separate-container.ast-two-container.ast-right-sidebar #secondary{padding-left:30px;padding-right:0;}.ast-separate-container.ast-two-container.ast-left-sidebar #secondary{padding-right:30px;padding-left:0;}}.elementor-button-wrapper .elementor-button{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0;}body .elementor-button.elementor-size-sm,body .elementor-button.elementor-size-xs,body .elementor-button.elementor-size-md,body .elementor-button.elementor-size-lg,body .elementor-button.elementor-size-xl,body .elementor-button{border-radius:100px;padding-top:14px;padding-right:30px;padding-bottom:14px;padding-left:30px;}.elementor-button-wrapper .elementor-button{border-color:#c10303;background-color:#c10303;}.elementor-button-wrapper .elementor-button:hover,.elementor-button-wrapper .elementor-button:focus{color:#ffffff;background-color:rgba(38,191,181,0.85);border-color:rgba(38,191,181,0.85);}.wp-block-button .wp-block-button__link,.elementor-button-wrapper .elementor-button,.elementor-button-wrapper .elementor-button:visited{color:#ffffff;}.elementor-button-wrapper .elementor-button{font-family:inherit;font-weight:inherit;line-height:1;}.wp-block-button .wp-block-button__link{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0;border-color:#c10303;background-color:#c10303;color:#ffffff;font-family:inherit;font-weight:inherit;line-height:1;border-radius:100px;padding-top:14px;padding-right:30px;padding-bottom:14px;padding-left:30px;}.wp-block-button .wp-block-button__link:hover,.wp-block-button .wp-block-button__link:focus{color:#ffffff;background-color:rgba(38,191,181,0.85);border-color:rgba(38,191,181,0.85);}.elementor-widget-heading h1.elementor-heading-title{line-height:1.2;}.elementor-widget-heading h2.elementor-heading-title{line-height:1.4;}.elementor-widget-heading h3.elementor-heading-title{line-height:1.5;}.elementor-widget-heading h4.elementor-heading-title{line-height:1.5;}.elementor-widget-heading h5.elementor-heading-title{line-height:1.5;}.elementor-widget-heading h6.elementor-heading-title{line-height:1.5;}.menu-toggle,button,.ast-button,.ast-custom-button,.button,input#submit,input[type="button"],input[type="submit"],input[type="reset"]{border-style:solid;border-top-width:0;border-right-width:0;border-left-width:0;border-bottom-width:0;color:#ffffff;border-color:#c10303;background-color:#c10303;border-radius:100px;padding-top:14px;padding-right:30px;padding-bottom:14px;padding-left:30px;font-family:inherit;font-weight:inherit;line-height:1;}button:focus,.menu-toggle:hover,button:hover,.ast-button:hover,.button:hover,input[type=reset]:hover,input[type=reset]:focus,input#submit:hover,input#submit:focus,input[type="button"]:hover,input[type="button"]:focus,input[type="submit"]:hover,input[type="submit"]:focus{color:#ffffff;background-color:rgba(38,191,181,0.85);border-color:rgba(38,191,181,0.85);}@media (min-width:921px){.ast-container{max-width:100%;}}@media (min-width:544px){.ast-container{max-width:100%;}}@media (max-width:544px){.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single{padding:1.5em 1em;}.ast-separate-container #content .ast-container{padding-left:0.54em;padding-right:0.54em;}.ast-separate-container #secondary{padding-top:0;}.ast-separate-container.ast-two-container #secondary .widget{margin-bottom:1.5em;padding-left:1em;padding-right:1em;}.ast-separate-container .comments-count-wrapper{padding:1.5em 1em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 1em;margin-bottom:1.5em;}.ast-separate-container .ast-comment-list .bypostauthor{padding:.5em;}.ast-separate-container .ast-archive-description{padding:1.5em 1em;}.ast-search-menu-icon.ast-dropdown-active .search-field{width:170px;}.ast-separate-container .comment-respond{padding:1.5em 1em;}}@media (max-width:544px){.ast-comment-list .children{margin-left:0.66666em;}.ast-separate-container .ast-comment-list .bypostauthor li{padding:0 0 0 .5em;}}@media (max-width:921px){.ast-mobile-header-stack .main-header-bar .ast-search-menu-icon{display:inline-block;}.ast-header-break-point.ast-header-custom-item-outside .ast-mobile-header-stack .main-header-bar .ast-search-icon{margin:0;}.ast-comment-avatar-wrap img{max-width:2.5em;}.comments-area{margin-top:1.5em;}.ast-separate-container .comments-count-wrapper{padding:2em 2.14em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 2.14em;}.ast-separate-container .comment-respond{padding:2em 2.14em;}}@media (max-width:921px){.ast-header-break-point .main-header-bar .ast-search-menu-icon.slide-search .search-form{right:0;}.ast-header-break-point .ast-mobile-header-stack .main-header-bar .ast-search-menu-icon.slide-search .search-form{right:-1em;}.ast-comment-avatar-wrap{margin-right:0.5em;}}@media (min-width:545px){.ast-page-builder-template .comments-area,.single.ast-page-builder-template .entry-header,.single.ast-page-builder-template .post-navigation{max-width:1210px;margin-left:auto;margin-right:auto;}}@media (max-width:921px){.ast-archive-description .ast-archive-title{font-size:40px;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:70px;}h2,.entry-content h2{font-size:40px;}h3,.entry-content h3{font-size:23px;}h4,.entry-content h4{font-size:18px;font-size:1.0588235294118rem;}h5,.entry-content h5{font-size:16px;font-size:0.94117647058824rem;}h6,.entry-content h6{font-size:14px;font-size:0.82352941176471rem;}.ast-single-post .entry-title,.page-title{font-size:30px;}}@media (max-width:544px){.ast-archive-description .ast-archive-title{font-size:40px;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:33px;}h2,.entry-content h2{font-size:25px;}h3,.entry-content h3{font-size:20px;}h4,.entry-content h4{font-size:14px;font-size:0.82352941176471rem;}h5,.entry-content h5{font-size:13px;font-size:0.76470588235294rem;}h6,.entry-content h6{font-size:12px;font-size:0.70588235294118rem;}.ast-single-post .entry-title,.page-title{font-size:30px;}.ast-header-break-point .site-branding img,.ast-header-break-point #masthead .site-logo-img .custom-logo-link img{max-width:74px;}.astra-logo-svg{width:74px;}.ast-header-break-point .site-logo-img .custom-mobile-logo-link img{max-width:74px;}}@media (max-width:921px){html{font-size:96.9%;}}@media (max-width:544px){html{font-size:96.9%;}}@media (min-width:922px){.ast-container{max-width:1210px;}}@font-face {font-family: "Astra";src: url(https://jawahirfreefire.mobi/wp-content/themes/astra/assets/fonts/astra.woff) format("woff"),url(https://jawahirfreefire.mobi/wp-content/themes/astra/assets/fonts/astra.ttf) format("truetype"),url(https://jawahirfreefire.mobi/wp-content/themes/astra/assets/fonts/astra.svg#astra) format("svg");font-weight: normal;font-style: normal;font-display: fallback;}@media (max-width:921px) {.main-header-bar .main-header-bar-navigation{display:none;}}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .astra-full-megamenu-wrapper{border-color:#d94948;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu{border-top-width:2px;border-right-width:0px;border-left-width:0px;border-bottom-width:0px;border-style:solid;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu{top:-2px;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .menu-link,.ast-desktop .main-header-menu.submenu-with-border .children .menu-link{border-bottom-width:0px;border-style:solid;border-color:#eaeaea;}@media (min-width:922px){.main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu:hover > .sub-menu,.main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu.focus > .sub-menu{margin-left:-0px;}}.ast-small-footer{border-top-style:solid;border-top-width:0;border-top-color:#7a7a7a;}@media (max-width:920px){.ast-404-layout-1 .ast-404-text{font-size:100px;font-size:5.8823529411765rem;}}#masthead .ast-container,.ast-header-breadcrumb .ast-container{max-width:100%;padding-left:35px;padding-right:35px;}@media (max-width:921px){#masthead .ast-container,.ast-header-breadcrumb .ast-container{padding-left:20px;padding-right:20px;}}#masthead .ast-container,.ast-header-breadcrumb .ast-container{max-width:100%;padding-left:35px;padding-right:35px;}@media (max-width:921px){#masthead .ast-container,.ast-header-breadcrumb .ast-container{padding-left:20px;padding-right:20px;}}@media (min-width:922px){.ast-theme-transparent-header #masthead{position:absolute;left:0;right:0;}.ast-theme-transparent-header .main-header-bar,.ast-theme-transparent-header.ast-header-break-point .main-header-bar{background:none;}body.elementor-editor-active.ast-theme-transparent-header #masthead,.fl-builder-edit .ast-theme-transparent-header #masthead,body.vc_editor.ast-theme-transparent-header #masthead,body.brz-ed.ast-theme-transparent-header #masthead{z-index:0;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .custom-mobile-logo-link{display:none;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .transparent-custom-logo{display:inline-block;}.ast-theme-transparent-header .ast-above-header{background-image:none;background-color:transparent;}.ast-theme-transparent-header .ast-below-header{background-image:none;background-color:transparent;}}.ast-theme-transparent-header .site-title a,.ast-theme-transparent-header .site-title a:focus,.ast-theme-transparent-header .site-title a:hover,.ast-theme-transparent-header .site-title a:visited{color:#ffffff;}.ast-theme-transparent-header .site-header .site-description{color:#ffffff;}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header.ast-header-break-point .main-header-bar-wrap .main-header-menu,.ast-flyout-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-fullscreen-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-flyout-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap .ast-above-header-navigation,.ast-flyout-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap .ast-below-header-actual-nav,.ast-fullscreen-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap,.ast-fullscreen-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap{background-color:rgba(255,255,255,0);}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header .main-header-menu .menu-link,.ast-theme-transparent-header .ast-masthead-custom-menu-items,.ast-theme-transparent-header .ast-masthead-custom-menu-items a,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle{color:rgba(255,255,255,0.75);}.ast-theme-transparent-header .main-header-menu .menu-item:hover > .menu-link,.ast-theme-transparent-header .main-header-menu .menu-item:hover > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover,.ast-theme-transparent-header .main-header-menu .focus > .menu-link,.ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-item > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle{color:#ffffff;}@media (max-width:921px){.ast-theme-transparent-header #masthead{position:absolute;left:0;right:0;}.ast-theme-transparent-header .main-header-bar,.ast-theme-transparent-header.ast-header-break-point .main-header-bar{background:none;}body.elementor-editor-active.ast-theme-transparent-header #masthead,.fl-builder-edit .ast-theme-transparent-header #masthead,body.vc_editor.ast-theme-transparent-header #masthead,body.brz-ed.ast-theme-transparent-header #masthead{z-index:0;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .custom-mobile-logo-link{display:none;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .transparent-custom-logo{display:inline-block;}.ast-theme-transparent-header .ast-above-header{background-image:none;background-color:transparent;}.ast-theme-transparent-header .ast-below-header{background-image:none;background-color:transparent;}}@media (max-width:921px){.ast-theme-transparent-header .site-title a,.ast-theme-transparent-header .site-title a:focus,.ast-theme-transparent-header .site-title a:hover,.ast-theme-transparent-header .site-title a:visited{color:#ffffff;}.ast-theme-transparent-header .site-header .site-title a:hover{color:rgba(255,255,255,0.75);}.ast-theme-transparent-header .site-header .site-description{color:#ffffff;}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header.ast-header-break-point .main-header-bar-wrap .main-header-menu,.ast-flyout-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-fullscreen-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-flyout-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap .ast-above-header-navigation,.ast-flyout-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap .ast-below-header-actual-nav,.ast-fullscreen-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap,.ast-fullscreen-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap{background-color:#f9f8f8;}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header .main-header-menu .menu-link,.ast-theme-transparent-header .ast-masthead-custom-menu-items,.ast-theme-transparent-header .ast-masthead-custom-menu-items a,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle{color:rgba(1,22,39,0.75);}.ast-theme-transparent-header .main-header-menu .menu-item:hover > .menu-link,.ast-theme-transparent-header .main-header-menu .menu-item:hover > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover,.ast-theme-transparent-header .main-header-menu .focus > .menu-link,.ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-item > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle{color:#011627;}}.ast-theme-transparent-header .main-header-bar,.ast-theme-transparent-header.ast-header-break-point .main-header-bar{border-bottom-width:0;border-bottom-style:solid;}.ast-breadcrumbs .trail-browse,.ast-breadcrumbs .trail-items,.ast-breadcrumbs .trail-items li{display:inline-block;margin:0;padding:0;border:none;background:inherit;text-indent:0;}.ast-breadcrumbs .trail-browse{font-size:inherit;font-style:inherit;font-weight:inherit;color:inherit;}.ast-breadcrumbs .trail-items{list-style:none;}.trail-items li::after{padding:0 0.3em;content:"\00bb";}.trail-items li:last-of-type::after{display:none;}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6{color:#011627;}.elementor-widget-heading .elementor-heading-title{margin:0;}.ast-header-break-point .main-header-bar{border-bottom-width:0;}@media (min-width:922px){.main-header-bar{border-bottom-width:0;}}.ast-safari-browser-less-than-11 .main-header-menu .menu-item, .ast-safari-browser-less-than-11 .main-header-bar .ast-masthead-custom-menu-items{display:block;}.main-header-menu .menu-item, .main-header-bar .ast-masthead-custom-menu-items{-js-display:flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}.main-header-menu > .menu-item > .menu-link{height:100%;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-js-display:flex;display:flex;}.ast-primary-menu-disabled .main-header-bar .ast-masthead-custom-menu-items{flex:unset;}.header-main-layout-1 .ast-flex.main-header-container, .header-main-layout-3 .ast-flex.main-header-container{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;}
+</style>
+
+
+
+<style id='global-styles-inline-css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;}:where(.is-layout-flex){gap: 0.5em;}body .is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}body .is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}body .is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}body .is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}body .is-layout-flex{flex-wrap: wrap;align-items: center;}body .is-layout-flex > *{margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+.wp-block-navigation a:where(:not(.wp-element-button)){color: inherit;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}
+.wp-block-pullquote{font-size: 1.5em;line-height: 1.6;}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin><!--[if IE]>
+<script src='https://jawahirfreefire.mobi/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=2.5.5' id='astra-flexibility-js'></script>
+<script id='astra-flexibility-js-after'>
+flexibility(document.documentElement);</script>
+<![endif]-->
+<script id='advanced-google-recaptcha-custom-js-extra'>
+var agrRecaptcha = {"site_key":"6LdkKAIjAAAAANymI_8bCvBLUDUttNmahUeIeu-7"};
+</script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/advanced-google-recaptcha/assets/js/captcha.min.js?ver=1.0.13' id='advanced-google-recaptcha-custom-js' defer></script>
+<script type="rocketlazyloadscript" src='https://www.google.com/recaptcha/api.js?hl=en_US&#038;onload=agrLoad&#038;render=explicit&#038;ver=1.0.13' id='advanced-google-recaptcha-api-js'></script>
+<script type="rocketlazyloadscript" src='js/all.min.js' id='font-awesome-4-shim-js' defer></script>
+<link rel="https://api.w.org/" href="https://jawahirfreefire.mobi/wp-json/" /><link rel="alternate" type="application/json" href="https://jawahirfreefire.mobi/wp-json/wp/v2/pages/441" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://jawahirfreefire.mobi/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://jawahirfreefire.mobi/wp-includes/wlwmanifest.xml" />
+<meta name="generator" content="WordPress 6.1.1" />
+<link rel='shortlink' href='https://jawahirfreefire.mobi/' />
+<link rel="alternate" type="application/json+oembed" href="https://jawahirfreefire.mobi/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjawahirfreefire.mobi%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://jawahirfreefire.mobi/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fjawahirfreefire.mobi%2F&#038;format=xml" />
+<meta name="cdp-version" content="1.3.7" /><!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="rocketlazyloadscript" async src="https://www.googletagmanager.com/gtag/js?id=UA-172417581-1"></script>
+<script type="rocketlazyloadscript">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-172417581-1');
+</script>
+<script type="rocketlazyloadscript" data-rocket-type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "50vguu3of5");
+</script>
+
+<!-- Facebook Pixel Code -->
+<script type="rocketlazyloadscript">
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '449529962865435');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=449529962865435&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code --><style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/cropped-f819b4ec57ed1c8c38b8a56ee63e7b67-32x32.jpg" sizes="32x32" />
+<link rel="icon" href="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/cropped-f819b4ec57ed1c8c38b8a56ee63e7b67-192x192.jpg" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/cropped-f819b4ec57ed1c8c38b8a56ee63e7b67-180x180.jpg" />
+<meta name="msapplication-TileImage" content="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/cropped-f819b4ec57ed1c8c38b8a56ee63e7b67-270x270.jpg" />
+<script type="rocketlazyloadscript">
+/*! loadCSS rel=preload polyfill. [c]2017 Filament Group, Inc. MIT License */
+(function(w){"use strict";if(!w.loadCSS){w.loadCSS=function(){}}
+var rp=loadCSS.relpreload={};rp.support=(function(){var ret;try{ret=w.document.createElement("link").relList.supports("preload")}catch(e){ret=!1}
+return function(){return ret}})();rp.bindMediaToggle=function(link){var finalMedia=link.media||"all";function enableStylesheet(){link.media=finalMedia}
+if(link.addEventListener){link.addEventListener("load",enableStylesheet)}else if(link.attachEvent){link.attachEvent("onload",enableStylesheet)}
+setTimeout(function(){link.rel="stylesheet";link.media="only x"});setTimeout(enableStylesheet,3000)};rp.poly=function(){if(rp.support()){return}
+var links=w.document.getElementsByTagName("link");for(var i=0;i<links.length;i++){var link=links[i];if(link.rel==="preload"&&link.getAttribute("as")==="style"&&!link.getAttribute("data-loadcss")){link.setAttribute("data-loadcss",!0);rp.bindMediaToggle(link)}}};if(!rp.support()){rp.poly();var run=w.setInterval(rp.poly,500);if(w.addEventListener){w.addEventListener("load",function(){rp.poly();w.clearInterval(run)})}else if(w.attachEvent){w.attachEvent("onload",function(){rp.poly();w.clearInterval(run)})}}
+if(typeof exports!=="undefined"){exports.loadCSS=loadCSS}
+else{w.loadCSS=loadCSS}}(typeof global!=="undefined"?global:this))
+</script></head>
+
+<body itemtype='https://schema.org/WebPage' itemscope='itemscope' class="home page-template-default page page-id-441 ehf-footer ehf-template-astra ehf-stylesheet-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-2.5.5 ast-header-custom-item-inside ast-full-width-primary-header ast-single-post ast-inherit-site-logo-transparent ast-theme-transparent-header elementor-default elementor-kit-435 elementor-page elementor-page-441">
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-red"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 1" /><feFuncG type="table" tableValues="0 0.27843137254902" /><feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-magenta-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.78039215686275 1" /><feFuncG type="table" tableValues="0 0.94901960784314" /><feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;" ><defs><filter id="wp-duotone-blue-orange"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.098039215686275 1" /><feFuncG type="table" tableValues="0 0.66274509803922" /><feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg><div 
+	class="hfeed site" id="page">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+	
+	
+		<header
+			class="site-header ast-primary-submenu-animation-fade header-main-layout-1 ast-primary-menu-disabled ast-no-menu-items ast-menu-toggle-icon ast-mobile-header-inline" id="masthead" itemtype="https://schema.org/WPHeader" itemscope="itemscope" itemid="#masthead"		>
+
+			
+			
+<div class="main-header-bar-wrap">
+	<div class="main-header-bar">
+				<div class="ast-container">
+
+			<div class="ast-flex main-header-container">
+				
+		<div class="site-branding">
+			<div
+			class="ast-site-identity" itemtype="https://schema.org/Organization" itemscope="itemscope"			>
+							</div>
+		</div>
+
+		<!-- .site-branding -->
+					</div><!-- Main Header Container -->
+		</div><!-- ast-row -->
+			</div> <!-- Main Header Bar -->
+</div> <!-- Main Header Bar Wrap -->
+
+			
+		</header><!-- #masthead -->
+
+		
+	
+	
+	<div id="content" class="site-content">
+
+		<div class="ast-container">
+
+		
+
+	<div id="primary" class="content-area primary">
+
+		
+					<main id="main" class="site-main">
+
+				
+					
+					
+
+<article 
+	class="post-441 page type-page status-publish ast-article-single" id="post-441" itemtype="https://schema.org/CreativeWork" itemscope="itemscope">
+
+	
+	<header class="entry-header ast-header-without-markup">
+
+		
+			</header><!-- .entry-header -->
+
+	<div class="entry-content clear" 
+		itemprop="text"	>
+
+		
+				<div data-elementor-type="wp-page" data-elementor-id="441" class="elementor elementor-441">
+						<div class="elementor-inner">
+				<div class="elementor-section-wrap">
+									<section class="elementor-section elementor-top-section elementor-element elementor-element-2927674f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2927674f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;shape_divider_bottom&quot;:&quot;wave-brush&quot;}">
+							<div class="elementor-background-overlay"></div>
+						<div class="elementor-shape elementor-shape-bottom" data-negative="false">
+			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="none">
+	<path class="elementor-shape-fill" d="M283.5,9.7c0,0-7.3,4.3-14,4.6c-6.8,0.3-12.6,0-20.9-1.5c-11.3-2-33.1-10.1-44.7-5.7	s-12.1,4.6-18,7.4c-6.6,3.2-20,9.6-36.6,9.3C131.6,23.5,99.5,7.2,86.3,8c-1.4,0.1-6.6,0.8-10.5,2c-3.8,1.2-9.4,3.8-17,4.7	c-3.2,0.4-8.3,1.1-14.2,0.9c-1.5-0.1-6.3-0.4-12-1.6c-5.7-1.2-11-3.1-15.8-3.7C6.5,9.2,0,10.8,0,10.8V0h283.5V9.7z M260.8,11.3	c-0.7-1-2-0.4-4.3-0.4c-2.3,0-6.1-1.2-5.8-1.1c0.3,0.1,3.1,1.5,6,1.9C259.7,12.2,261.4,12.3,260.8,11.3z M242.4,8.6	c0,0-2.4-0.2-5.6-0.9c-3.2-0.8-10.3-2.8-15.1-3.5c-8.2-1.1-15.8,0-15.1,0.1c0.8,0.1,9.6-0.6,17.6,1.1c3.3,0.7,9.3,2.2,12.4,2.7	C239.9,8.7,242.4,8.6,242.4,8.6z M185.2,8.5c1.7-0.7-13.3,4.7-18.5,6.1c-2.1,0.6-6.2,1.6-10,2c-3.9,0.4-8.9,0.4-8.8,0.5	c0,0.2,5.8,0.8,11.2,0c5.4-0.8,5.2-1.1,7.6-1.6C170.5,14.7,183.5,9.2,185.2,8.5z M199.1,6.9c0.2,0-0.8-0.4-4.8,1.1	c-4,1.5-6.7,3.5-6.9,3.7c-0.2,0.1,3.5-1.8,6.6-3C197,7.5,199,6.9,199.1,6.9z M283,6c-0.1,0.1-1.9,1.1-4.8,2.5s-6.9,2.8-6.7,2.7	c0.2,0,3.5-0.6,7.4-2.5C282.8,6.8,283.1,5.9,283,6z M31.3,11.6c0.1-0.2-1.9-0.2-4.5-1.2s-5.4-1.6-7.8-2C15,7.6,7.3,8.5,7.7,8.6	C8,8.7,15.9,8.3,20.2,9.3c2.2,0.5,2.4,0.5,5.7,1.6S31.2,11.9,31.3,11.6z M73,9.2c0.4-0.1,3.5-1.6,8.4-2.6c4.9-1.1,8.9-0.5,8.9-0.8	c0-0.3-1-0.9-6.2-0.3S72.6,9.3,73,9.2z M71.6,6.7C71.8,6.8,75,5.4,77.3,5c2.3-0.3,1.9-0.5,1.9-0.6c0-0.1-1.1-0.2-2.7,0.2	C74.8,5.1,71.4,6.6,71.6,6.7z M93.6,4.4c0.1,0.2,3.5,0.8,5.6,1.8c2.1,1,1.8,0.6,1.9,0.5c0.1-0.1-0.8-0.8-2.4-1.3	C97.1,4.8,93.5,4.2,93.6,4.4z M65.4,11.1c-0.1,0.3,0.3,0.5,1.9-0.2s2.6-1.3,2.2-1.2s-0.9,0.4-2.5,0.8C65.3,10.9,65.5,10.8,65.4,11.1	z M34.5,12.4c-0.2,0,2.1,0.8,3.3,0.9c1.2,0.1,2,0.1,2-0.2c0-0.3-0.1-0.5-1.6-0.4C36.6,12.8,34.7,12.4,34.5,12.4z M152.2,21.1	c-0.1,0.1-2.4-0.3-7.5-0.3c-5,0-13.6-2.4-17.2-3.5c-3.6-1.1,10,3.9,16.5,4.1C150.5,21.6,152.3,21,152.2,21.1z"/>
+	<path class="elementor-shape-fill" d="M269.6,18c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3	C267.7,18.8,269.7,18,269.6,18z"/>
+	<path class="elementor-shape-fill" d="M227.4,9.8c-0.2-0.1-4.5-1-9.5-1.2c-5-0.2-12.7,0.6-12.3,0.5c0.3-0.1,5.9-1.8,13.3-1.2	S227.6,9.9,227.4,9.8z"/>
+	<path class="elementor-shape-fill" d="M204.5,13.4c-0.1-0.1,2-1,3.2-1.1c1.2-0.1,2,0,2,0.3c0,0.3-0.1,0.5-1.6,0.4	C206.4,12.9,204.6,13.5,204.5,13.4z"/>
+	<path class="elementor-shape-fill" d="M201,10.6c0-0.1-4.4,1.2-6.3,2.2c-1.9,0.9-6.2,3.1-6.1,3.1c0.1,0.1,4.2-1.6,6.3-2.6	S201,10.7,201,10.6z"/>
+	<path class="elementor-shape-fill" d="M154.5,26.7c-0.1-0.1-4.6,0.3-7.2,0c-7.3-0.7-17-3.2-16.6-2.9c0.4,0.3,13.7,3.1,17,3.3	C152.6,27.5,154.6,26.8,154.5,26.7z"/>
+	<path class="elementor-shape-fill" d="M41.9,19.3c0,0,1.2-0.3,2.9-0.1c1.7,0.2,5.8,0.9,8.2,0.7c4.2-0.4,7.4-2.7,7-2.6	c-0.4,0-4.3,2.2-8.6,1.9c-1.8-0.1-5.1-0.5-6.7-0.4S41.9,19.3,41.9,19.3z"/>
+	<path class="elementor-shape-fill" d="M75.5,12.6c0.2,0.1,2-0.8,4.3-1.1c2.3-0.2,2.1-0.3,2.1-0.5c0-0.1-1.8-0.4-3.4,0	C76.9,11.5,75.3,12.5,75.5,12.6z"/>
+	<path class="elementor-shape-fill" d="M15.6,13.2c0-0.1,4.3,0,6.7,0.5c2.4,0.5,5,1.9,5,2c0,0.1-2.7-0.8-5.1-1.4	C19.9,13.7,15.7,13.3,15.6,13.2z"/>
+</svg>		</div>
+					<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4b3ee675" data-id="4b3ee675" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3e04c1bd elementor-invisible elementor-widget elementor-widget-image" data-id="3e04c1bd" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInDown&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="512" height="512" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" class="attachment-medium_large size-medium_large wp-image-663" alt="jawgo" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png 512w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-300x300.png 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-150x150.png 150w" sizes="(max-width: 512px) 100vw, 512px" />														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-4584e407 elementor-widget elementor-widget-spacer" data-id="4584e407" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2ca19c15 elementor-invisible elementor-widget elementor-widget-heading" data-id="2ca19c15" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">شـحن جواهر فري فاير مجانًا | جواهر فري فاير مجانية 100% | اشـحن جواهر فري فاير مـجانًا الآن</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4d4f430c elementor-widget elementor-widget-spacer" data-id="4d4f430c" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-17c7ab7c elementor-widget elementor-widget-text-editor" data-id="17c7ab7c" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>ادا كُنت من محبــي ألعاب الباتل روايال فري فــاير فأنت بالتأكيـــد تبحت عن طريقة مجانية ل شحن جواهر فري فاير مجانًا. هدو هـي فرصتك لشحن فري فاير مجانا و الاستمتاع بآلاف الجواهر مجـانًا، الـحق لا تفوت، شحن جواهر فري فاير بالمجان.</p><p>بكل بساطة اتبع الخطوات المبينة في موقعنــــا، و ستتمكــن من شحن آلاف جواهر فري فاير على لعبة فري فاير بدون تهكيــر او ڭليـــتش و في دقائق قليــلة.</p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1ec93eb9 elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="1ec93eb9" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#freefire" class="elementor-button-link elementor-button elementor-size-md elementor-animation-wobble-vertical" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">إشحـــن الآن</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2f739041 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2f739041" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2f9dc25a" data-id="2f9dc25a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-64bc030b elementor-invisible elementor-widget elementor-widget-heading" data-id="64bc030b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default"> أولاً ما هي جواهر فري فاير وفيما يمكن استخدامها؟   </h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-69de1481 elementor-widget elementor-widget-spacer" data-id="69de1481" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-61867f0 elementor-widget elementor-widget-text-editor" data-id="61867f0" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>لعبة ڭارينــا <a href="https://en.wikipedia.org/wiki/Garena_Free_Fire">فري فاير</a> هن لعبة من نوع الباتل روايال الدي اصبح يتسم بشهرة واسعة للغاية في السنوات الأخيرة، متلها متل لعبة ببجــي و فورت نايــت و كال وف ديوتي و غيرهــا من الالعاب  الشهيرة حالـيا</p><div class="mod" lang="ar-US" data-attrid="kc:/cvg/computer_videogame:release date" data-md="1001" data-hveid="CA0QAA" data-ved="2ahUKEwjMydytmsPpAhXBpZ4KHfYPBSsQkCkwH3oECA0QAA"><div class="Z1hOCe">وتاتي اللعبة على انظمة IOS و Android</div><div> </div></div><p>و كتعريـف بسيط ، كل 10 دقائق يتم وضعك في جزيرة عشوائية مملوءة بالأدوات والأسلحة المختلفة حيت ستقوم بقاتلة 49 شخص آخر من اجل الانفراد بلقب الناجي الاخيــر و الوحيد. مهمتك الوحيدة هــي ان تبقى على قيد الحياة و ايجاد اسلحة و ادوات تساعدك على الفوزباللقب.</p><p>كباقي العاب الباتل روايال الشهيرة فري فاير توجد بها عملة داخل اللعبة يمكن للاعبين استعمالهـا بطرق مختلفة. هي عملة افتراضية <a href="https://freefirefreediamond.net/">Free Fire Free Diamond</a>  مخصصة للعبة فري فاير، تُعرف في العالم العربي بإسم جواهر فري فاير. وتستخدم جواهر فري فاير لشراء محتويات واضافات اللعبة .</p><p>كشراء سكنات و الأزياء الخاصة بالشخصيات و كدا الاسلحة، ايضا يمكنك انفاق جواهر فري فاير لشراء بطائق المعركة او ما يصطلح عليها بالباتل باس و ايضا لا ننسى امكانية شحن السيزون و الاستفادة من مزاياه..</p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-103ec9b6 elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="103ec9b6" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#freefirev1" class="elementor-button-link elementor-button elementor-size-md elementor-animation-wobble-vertical" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">إشحـــن الآن</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-2f944c88 elementor-widget elementor-widget-spacer" data-id="2f944c88" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-56f63001" data-id="56f63001" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-61c05cb6 elementor-widget elementor-widget-menu-anchor" data-id="61c05cb6" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="freefire" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-29c5f41d elementor-widget elementor-widget-image" data-id="29c5f41d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="512" height="512" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" class="attachment-large size-large wp-image-663" alt="jawgo" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png 512w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-300x300.png 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-150x150.png 150w" sizes="(max-width: 512px) 100vw, 512px" />														</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-47e379bb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="47e379bb" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-acec37d" data-id="acec37d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-229fb70 elementor-widget elementor-widget-spacer" data-id="229fb70" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c6d137 elementor-invisible elementor-widget elementor-widget-heading" data-id="c6d137" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">مزايا استعمال موقعنا لشحن جواهر فري فاير مجانًا</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4df006b6 elementor-widget elementor-widget-heading" data-id="4df006b6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">لمــادا بجب عليــك الوتوق بموقعنــا  لشحن جواهر فري فاير؟</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-53614690 elementor-widget elementor-widget-menu-anchor" data-id="53614690" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="freefirev1" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5fa246b3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5fa246b3" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-da01b0c" data-id="da01b0c" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-ae09aa8 elementor-invisible elementor-widget elementor-widget-image" data-id="ae09aa8" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="512" height="512" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" class="attachment-large size-large wp-image-663" alt="jawgo" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png 512w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-300x300.png 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-150x150.png 150w" sizes="(max-width: 512px) 100vw, 512px" />														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-797572d3 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="797572d3" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>جواهر فري فاير مجانية 100%</p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-560db314 elementor-widget elementor-widget-text-editor" data-id="560db314" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>جواهر فري فاير المحصل عليهـا من طرف موقعنا هي مجانية 100% بدون رسوم او شتراك. لأن الجواهر فري فاير المحصل عليهـا رقمية و مجانية ويتم ارسالها لك عبر حسابك فري فايرمباشرة. و دالك بفضل الجهات الراعية لموقعنا التي تمكننا من ارسال آلآف الجواهر فري فاير كل يوم لعدد من اللاعبين في العالم العربي. يمكنك العوة كل 24 ساعة لاستعمال موقعنا لشحن حسابك فري فاير مجانا بكل سهولة و بلا حدود.</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-624ed84e" data-id="624ed84e" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6313c4ab elementor-invisible elementor-widget elementor-widget-image" data-id="6313c4ab" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="512" height="512" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" class="attachment-large size-large wp-image-663" alt="jawgo" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png 512w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-300x300.png 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-150x150.png 150w" sizes="(max-width: 512px) 100vw, 512px" />														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-64de4982 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="64de4982" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p style="text-align: center;">شحن سريع %100</p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-58cdbb66 elementor-widget elementor-widget-text-editor" data-id="58cdbb66" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>يتميز موقعنا لشحن جواهر فري فاير بالمعالجة السريعة للمعلومات و المعطيات التي تمككنا من ارسالالجواهر فري فاير المحصل عليه من طرفك في اقصر وقت ممكن. بشكل عام يتم ارسال شدات ببجي المحصل عليها خلال دقائق ويعتمد ذلك على البلد الدي طريقة عملية فك المحتوى المتاحة. بمعنى انه في غضون بضع دقائق ستتوصل بالشدات على حساب ببجي الخاص بك</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-5da0138d" data-id="5da0138d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-d76b9b1 elementor-invisible elementor-widget elementor-widget-image" data-id="d76b9b1" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="512" height="512" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" class="attachment-large size-large wp-image-663" alt="jawgo" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png 512w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-300x300.png 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-150x150.png 150w" sizes="(max-width: 512px) 100vw, 512px" />														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-441c250 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="441c250" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<div class="text-wrap tlid-copy-target"><div class="result-shield-container tlid-copy-target result-rtl" tabindex="0"><span class="tlid-translation translation" lang="ar"><span title="">100٪  موقعنـا آمــن <br /></span></span></div></div>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-2f51ebc1 elementor-widget elementor-widget-text-editor" data-id="2f51ebc1" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p><br />تم تصميم موقعنا على اعلى معاير الامان وتوفير خدمة شحن جواهر فري فاير مجانية. لن يتم اجبارك على ادخال أي معلومات إضافية أو شخصية متل كلمة السرالخاصة بحسابك او أي شيئ من معلومات حساسة شخصية. وبالتالي سيكون حسابك آمنًا طوال مدة استخدامك لموقعنا لشحن جواهر فري فاير. من اهم مزايا موقعنا لشحن جواهر فري فاير هي حماية حسابك، كل ما نحتاجه لشحن حسابك فري فاير هو اسمك او الآي دي داخل لعبة فري فاير او الايميل الخاص بحسابك فري فاير. </p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-d36bf71 elementor-widget elementor-widget-spacer" data-id="d36bf71" data-element_type="widget" data-widget_type="spacer.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-spacer">
+			<div class="elementor-spacer-inner"></div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-c16806f elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="c16806f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#jawahirfreefire" class="elementor-button-link elementor-button elementor-size-md elementor-animation-wobble-vertical" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">إشحـــن الآن</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-565f32c1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="565f32c1" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1f274a3a" data-id="1f274a3a" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-262e03b4 elementor-invisible elementor-widget elementor-widget-heading" data-id="262e03b4" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">مـــا هي خطوات شحـن جواهر فري فاير مجانا عبر موقعنـا؟  
+
+</h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-168b9609 elementor-widget elementor-widget-menu-anchor" data-id="168b9609" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="jawahirfreefire" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-644f30b elementor-widget elementor-widget-heading" data-id="644f30b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">ستتمكن من شحن حسابك مجانا في دقائق قليلة</h2>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-3b7cb0f3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3b7cb0f3" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-6489b56d" data-id="6489b56d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-6e16df79 elementor-widget elementor-widget-image" data-id="6e16df79" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="512" height="512" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" class="attachment-large size-large wp-image-663" alt="jawgo" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png 512w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-300x300.png 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-150x150.png 150w" sizes="(max-width: 512px) 100vw, 512px" />														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-543fd3a9 elementor-invisible elementor-widget elementor-widget-text-editor" data-id="543fd3a9" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p><span class="ILfuVd c3biWd"><span class="e24Kjd"><span class="st"><span dir="rtl"> الخطوة الأولى</span></span>#</span></span>1</p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-3bfda025 elementor-widget elementor-widget-text-editor" data-id="3bfda025" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p> بكل سهولة أدخل إسمك أو الآي دي داخل لعبة فري فاير الخاص بك ثم انقر فوق إبـــدأ. لا تحتاج إلى إدخال كلمة المرور الخاصة بك او اي معلومات إضافيــة. سيتم شحن حسابك على لعبة فري فاير بشكل مباشر وفوري .</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-60a46bae" data-id="60a46bae" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-74682ce0 elementor-widget elementor-widget-image" data-id="74682ce0" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="512" height="512" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" class="attachment-large size-large wp-image-663" alt="jawgo" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png 512w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-300x300.png 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-150x150.png 150w" sizes="(max-width: 512px) 100vw, 512px" />														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-6dbbb45b elementor-invisible elementor-widget elementor-widget-text-editor" data-id="6dbbb45b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p><span class="ILfuVd c3biWd"><span class="e24Kjd"><span class="st"><span dir="rtl"> الخطوة التانيـة</span></span>#</span></span>2</p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-6635c8f5 elementor-widget elementor-widget-text-editor" data-id="6635c8f5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>بعد التحقق من اسم المستخدم الذي ادخلته ، حان الوقت الآن لاختيار المنصة التي تلعب عليــها ، بيسي او بلايستيشن او موبايـل.. بعدهــــا ايضا ستختار باقة او كمية جواهر فري فاير التي تود الحصول عليهـا</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-54e089b7" data-id="54e089b7" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-57fe658e elementor-widget elementor-widget-image" data-id="57fe658e" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="512" height="512" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" class="attachment-large size-large wp-image-663" alt="jawgo" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png 512w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-300x300.png 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-150x150.png 150w" sizes="(max-width: 512px) 100vw, 512px" />														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1c9a4ebb elementor-invisible elementor-widget elementor-widget-text-editor" data-id="1c9a4ebb" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p><span class="ILfuVd c3biWd"><span class="e24Kjd"><span class="st"><span dir="rtl"> الخطوة الثالثة </span></span>#</span></span>3</p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-6df5aa6 elementor-widget elementor-widget-text-editor" data-id="6df5aa6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>هذه هي الخطوة الأكثر أهمية ، كما ذكرنا سابقًا ، يقوم <a href="https://jawahirfreefire.mobi/">موقعنا</a> ب شحن جواهر فري فاير مجانًا و دالك بفضل المانحين والجهات الراعية لموقعنا، لدا كخطوة أخيرة قم يطلب منك اجتياز عملية تحقيق بسيطة و دالك لفك المحتوى و استلام جواهر فري فاير التي تم تحصيلها&#8230; لا تقلق في غالب الاحيان هده العملية لا تتعدى 30 تانية بعدها يتم ارسال جواهر فري فاير مباشرة الى حســـابك.</p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-811f65c elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="811f65c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="#jawahir2021" target="_blank" rel="nofollow" class="elementor-button-link elementor-button elementor-size-md elementor-animation-wobble-vertical" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">إشحـــن الآن</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5490d483 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5490d483" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-5f38ab78" data-id="5f38ab78" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-30759eab elementor-widget elementor-widget-menu-anchor" data-id="30759eab" data-element_type="widget" data-widget_type="menu-anchor.default">
+				<div class="elementor-widget-container">
+					<div id="jawahir2021" class="elementor-menu-anchor"></div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-349fbc59 elementor-invisible elementor-widget elementor-widget-heading" data-id="349fbc59" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h2 class="elementor-heading-title elementor-size-default">لا تتـــردد قم بشحن  جواهر فري فاير مجانًا الآن  </h2>		</div>
+				</div>
+				<div class="elementor-element elementor-element-2f4fef92 elementor-widget elementor-widget-image" data-id="2f4fef92" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-image">
+												<img decoding="async" width="512" height="512" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png" class="attachment-large size-large wp-image-663" alt="jawgo" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo.png 512w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-300x300.png 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/11/jawgo-150x150.png 150w" sizes="(max-width: 512px) 100vw, 512px" />														</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1d51d255 elementor-widget elementor-widget-text-editor" data-id="1d51d255" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>لا تتـــردد قم بالشحن الآن و استمتع بآلافجواهر فري فاير مجانًا، قم بشحن الباتل بــاس و مئات السكنات اليــوم&#8230; فقط بضع دقائق تفصلك عن الآف جواهر فري فايرالمجانية.</p><p>موقعنا يعمل بشكل بسيط كل ما عليك هو إضافة إسمك باللعبة فري فاير او الاي دي الخاصة بك. تم اختيار باقة جواهر فري فاير التي ترغب بتحصيلها على حسابك ومن ثم التوجه لاتمام عملية فك المحتوى الأنسب لك والمتاحة وبمجرد اتمامك لعملية فك المحتوى بنجاح سوف تحصل جواهر فري فاير المحصل عليهـا مجانا و بدون رسوم.</p><p> </p>					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-583889b4 elementor-align-center elementor-invisible elementor-widget elementor-widget-button" data-id="583889b4" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;zoomIn&quot;}" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-button-wrapper">
+			<a href="index2.html" target="_blank" rel="nofollow" class="elementor-button-link elementor-button elementor-size-md elementor-animation-wobble-vertical" role="button">
+						<span class="elementor-button-content-wrapper">
+						<span class="elementor-button-text">إشحـــن الآن</span>
+		</span>
+					</a>
+		</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-565b1d50 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="565b1d50" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-4adbbbb" data-id="4adbbbb" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-3d94b1fc elementor-invisible elementor-widget elementor-widget-heading" data-id="3d94b1fc" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<h3 class="elementor-heading-title elementor-size-large"> تجارب و شهادات آخر العملاء الدين استعملو موقعنـا لشحنجواهر فري فاير مجانًا  </h3>		</div>
+				</div>
+				<div class="elementor-element elementor-element-4c0f10c9 elementor-widget elementor-widget-text-editor" data-id="4c0f10c9" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p>ان كــان لديك اي شك إقرأ آخر التعليقات من الاشخاص الدين تمكنو من شحن جواهر فري فاير مجانًا عبر موقعنـا</p>					</div>
+						</div>
+				</div>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-ef1512d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="ef1512d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-152ad52b" data-id="152ad52b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-1f2ebe61 elementor-view-default elementor-widget elementor-widget-icon" data-id="1f2ebe61" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+							<i class="fa fa-quote-right" aria-hidden="true"></i>
+						</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-1387331 elementor-widget elementor-widget-testimonial" data-id="1387331" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+							<div class="elementor-testimonial-content">يعطيك العافية ع التعامل  و الشحن السريع والخدمة المميزة الله يعين الميزانية دام اولادي عرفوا دربك بالتوفيق لك #السعودية #فري فاير#كفو</div>
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-top">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="400" height="400" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/RH____511.jpg" class="attachment-full size-full wp-image-469" alt="" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/RH____511.jpg 400w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/RH____511-300x300.jpg 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/RH____511-150x150.jpg 150w" sizes="(max-width: 400px) 100vw, 400px" />						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name"> 😊ابــُو مِشْعل</div>
+																						<div class="elementor-testimonial-job">@Mesh3al_NFC</div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-1d446d05" data-id="1d446d05" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-da83249 elementor-view-default elementor-widget elementor-widget-icon" data-id="da83249" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+							<i class="fa fa-quote-right" aria-hidden="true"></i>
+						</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-4f0b91fd elementor-widget elementor-widget-testimonial" data-id="4f0b91fd" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+							<div class="elementor-testimonial-content">
+الله يعطيك العافيه كنت متخيل سرعه  الشحن و التوصيل بس انت ماشاء الله كان تعاملك فوق ما تخيلت .. وصلتني جواهر فري فاير في دقايق الف الف شكر لك</div>
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-top">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="319" height="319" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/ifayzx.jpg" class="attachment-full size-full wp-image-470" alt="" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/ifayzx.jpg 319w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/ifayzx-300x300.jpg 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/ifayzx-150x150.jpg 150w" sizes="(max-width: 319px) 100vw, 319px" />						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">فهيدآن الرشيدي 😊  </div>
+																						<div class="elementor-testimonial-job">@Hfc0i</div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5455deb5" data-id="5455deb5" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-190a16a5 elementor-view-default elementor-widget elementor-widget-icon" data-id="190a16a5" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+							<i class="fa fa-quote-right" aria-hidden="true"></i>
+						</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-23544b5f elementor-widget elementor-widget-testimonial" data-id="23544b5f" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+							<div class="elementor-testimonial-content">
+بصراحه مصداقيه وسرعه في الشحن مني لكم خالص التوفيق ، موقع جداً رائع و مصداقيته ١٠٠٪ شحنت منه اكثر من ٥ مرات و سريع الاستجابة يستاهل ي جماعة  </div>
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-top">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="360" height="360" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Seee7r.jpg" class="attachment-full size-full wp-image-471" alt="" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Seee7r.jpg 360w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Seee7r-300x300.jpg 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Seee7r-150x150.jpg 150w" sizes="(max-width: 360px) 100vw, 360px" />						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name"> 😊 دحــمـان</div>
+																						<div class="elementor-testimonial-job">@sr_dahmn</div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-inner-section elementor-element elementor-element-241562f9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="241562f9" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-514875c1" data-id="514875c1" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-30b28d2a elementor-view-default elementor-widget elementor-widget-icon" data-id="30b28d2a" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+							<i class="fa fa-quote-right" aria-hidden="true"></i>
+						</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-5fa33050 elementor-widget elementor-widget-testimonial" data-id="5fa33050" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+							<div class="elementor-testimonial-content">كفووو يا عيال . خلال 4 دقايق والشدات عندي. تعامل ممتاز وسريع وشحن مجاني 100% ... فدووووووووه</div>
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-top">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="400" height="400" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Fahad9202.jpg" class="attachment-full size-full wp-image-472" alt="" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Fahad9202.jpg 400w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Fahad9202-300x300.jpg 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Fahad9202-150x150.jpg 150w" sizes="(max-width: 400px) 100vw, 400px" />						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name"> 😊 آلـوْد إبْرآهيم</div>
+																						<div class="elementor-testimonial-job">@al_wed_e</div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-69a18c9b" data-id="69a18c9b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-69e450d9 elementor-view-default elementor-widget elementor-widget-icon" data-id="69e450d9" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+							<i class="fa fa-quote-right" aria-hidden="true"></i>
+						</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-68538794 elementor-widget elementor-widget-testimonial" data-id="68538794" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+							<div class="elementor-testimonial-content">فديتكم شحن سريع و تعامل راقي يعطيكم الف عافيه .. مو اول مرة  , وصلتني جواهر فري فاير  في أقل من دقيقة  شكراً لكم وبارك لكم  شاحن معكم ترا</div>
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-top">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="400" height="400" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/abowaerf.jpg" class="attachment-full size-full wp-image-473" alt="" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/abowaerf.jpg 400w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/abowaerf-300x300.jpg 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/abowaerf-150x150.jpg 150w" sizes="(max-width: 400px) 100vw, 400px" />						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name">عمر شّوافْ😊  </div>
+																						<div class="elementor-testimonial-job">@OmarSaggaf</div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-5011418b" data-id="5011418b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4dba3fed elementor-view-default elementor-widget elementor-widget-icon" data-id="4dba3fed" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+							<i class="fa fa-quote-right" aria-hidden="true"></i>
+						</div>
+		</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-40898a0e elementor-widget elementor-widget-testimonial" data-id="40898a0e" data-element_type="widget" data-widget_type="testimonial.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-testimonial-wrapper">
+							<div class="elementor-testimonial-content"> شي حلو وسهل بدال المشوار شراء جواهر و خسران الفلوس؛ جواهر فري فاير مجانية وتوصلني باقل من ثلاث دقايق تشكولآر خدمة مميزهّ حبيت موقعكم  </div>
+			
+						<div class="elementor-testimonial-meta elementor-has-image elementor-testimonial-image-position-top">
+				<div class="elementor-testimonial-meta-inner">
+											<div class="elementor-testimonial-image">
+							<img decoding="async" width="400" height="400" src="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Mesh3al_NFC.jpg" class="attachment-full size-full wp-image-474" alt="" loading="lazy" srcset="https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Mesh3al_NFC.jpg 400w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Mesh3al_NFC-300x300.jpg 300w, https://jawahirfreefire.mobi/wp-content/uploads/2020/10/Mesh3al_NFC-150x150.jpg 150w" sizes="(max-width: 400px) 100vw, 400px" />						</div>
+					
+										<div class="elementor-testimonial-details">
+														<div class="elementor-testimonial-name"> 😊 أحمב</div>
+																						<div class="elementor-testimonial-job">@ah_h165</div>
+													</div>
+									</div>
+			</div>
+					</div>
+				</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-19f59201 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="19f59201" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-31a530ee" data-id="31a530ee" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-32413427 elementor-widget elementor-widget-heading" data-id="32413427" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-heading-title elementor-size-default"><a href="#">مـــن نحن</a></div>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-42887b52" data-id="42887b52" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-35f3ddae elementor-widget elementor-widget-heading" data-id="35f3ddae" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-heading-title elementor-size-default"><a href="#">اتصل بنــا</a></div>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-2677840" data-id="2677840" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-4f0d78dd elementor-widget elementor-widget-heading" data-id="4f0d78dd" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-heading-title elementor-size-default"><a href="#">سيـاسية الخصوصية</a></div>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-3520651d" data-id="3520651d" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-b2ba363 elementor-widget elementor-widget-heading" data-id="b2ba363" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+			<div class="elementor-heading-title elementor-size-default"><a href="https://vbuckarabia.siterubix.com/">الرئيسية  </a></div>		</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-2bccd14f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2bccd14f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+							<div class="elementor-row">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-153fadf0" data-id="153fadf0" data-element_type="column">
+			<div class="elementor-column-wrap elementor-element-populated">
+							<div class="elementor-widget-wrap">
+						<div class="elementor-element elementor-element-196156df elementor-widget elementor-widget-text-editor" data-id="196156df" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+								<div class="elementor-text-editor elementor-clearfix">
+				<p style="text-align: center;"> 2020 © كافة الحقوق محفوظة</p>					</div>
+						</div>
+				</div>
+						</div>
+					</div>
+		</div>
+								</div>
+					</div>
+		</section>
+									</div>
+			</div>
+					</div>
+		
+		
+		
+	</div><!-- .entry-content .clear -->
+
+	
+	
+</article><!-- #post-## -->
+
+
+					
+					
+				
+			</main><!-- #main -->
+			
+		
+	</div><!-- #primary -->
+
+
+			
+			</div> <!-- ast-container -->
+
+		</div><!-- #content -->
+
+		
+		
+				<footer itemtype="https://schema.org/WPFooter" itemscope="itemscope" id="colophon" role="contentinfo">
+			<div class='footer-width-fixer'></div>		</footer>
+	
+		
+	</div><!-- #page -->
+
+	
+	
+<script id='astra-theme-js-js-extra'>
+var astra = {"break_point":"921","isRtl":""};
+</script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/themes/astra/assets/js/minified/style.min.js?ver=2.5.5' id='astra-theme-js-js' defer></script>
+<script type="rocketlazyloadscript" id='rocket-browser-checker-js-after'>
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+</script>
+<script id='rocket-preload-links-js-extra'>
+var RocketPreloadLinksConfig = {"excludeUris":"\/(.+\/)?feed\/?.+\/?|\/(?:.+\/)?embed\/|\/(index\\.php\/)?wp\\-json(\/.*|$)|\/wp-admin\/|\/logout\/|\/wp-login.php","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|php|pdf|html|htm","siteUrl":"https:\/\/jawahirfreefire.mobi","onHoverDelay":"100","rateThrottle":"3"};
+</script>
+<script type="rocketlazyloadscript" id='rocket-preload-links-js-after'>
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+</script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.10.1' id='elementor-webpack-runtime-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-includes/js/jquery/jquery.min.js?ver=3.6.1' id='jquery-core-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.10.1' id='elementor-frontend-modules-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2' id='elementor-waypoints-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-includes/js/jquery/ui/core.min.js?ver=1.13.2' id='jquery-ui-core-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6' id='swiper-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.10.1' id='share-link-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.9.0' id='elementor-dialog-js' defer></script>
+<script type="rocketlazyloadscript" id='elementor-frontend-js-before'>
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Extra","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Extra","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.10.1","is_static":false,"experimentalFeatures":{"e_hidden_wordpress_widgets":true,"landing-pages":true,"kit-elements-defaults":true},"urls":{"assets":"https:\/\/jawahirfreefire.mobi\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":441,"title":"%D8%B4%D9%80%D8%AD%D9%86%20%D8%AC%D9%88%D8%A7%D9%87%D8%B1%20%D9%81%D8%B1%D9%8A%20%D9%81%D8%A7%D9%8A%D8%B1%20%D9%85%D8%AC%D8%A7%D9%86%D9%8B%D8%A7%20%7C%20%D8%AC%D9%88%D8%A7%D9%87%D8%B1%20%D9%81%D8%B1%D9%8A%20%D9%81%D8%A7%D9%8A%D8%B1%20%D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9%20100%25%20%7C%20%D8%A7%D8%B4%D9%80%D8%AD%D9%86%20%D8%AC%D9%88%D8%A7%D9%87%D8%B1%20%D9%81%D8%B1%D9%8A%20%D9%81%D8%A7%D9%8A%D8%B1%20%D9%85%D9%80%D8%AC%D8%A7%D9%86%D9%8B%D8%A7%20%D8%A7%D9%84%D8%A2%D9%86","excerpt":"","featuredImage":false}};
+</script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.10.1' id='elementor-frontend-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/elementor/assets/js/preloaded-modules.min.js?ver=3.10.1' id='preloaded-modules-js' defer></script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-includes/js/underscore.min.js?ver=1.13.4' id='underscore-js' defer></script>
+<script id='wp-util-js-extra'>
+var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+</script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-includes/js/wp-util.min.js?ver=6.1.1' id='wp-util-js' defer></script>
+<script id='wpforms-elementor-js-extra'>
+var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
+</script>
+<script type="rocketlazyloadscript" src='https://jawahirfreefire.mobi/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.7.9.1' id='wpforms-elementor-js' defer></script>
+			<script type="rocketlazyloadscript">
+			/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+			</script>
+			
+	<script type="rocketlazyloadscript">"use strict";var wprRemoveCPCSS=function wprRemoveCPCSS(){var elem;document.querySelector('link[data-rocket-async="style"][rel="preload"]')?setTimeout(wprRemoveCPCSS,200):(elem=document.getElementById("rocket-critical-css"))&&"remove"in elem&&elem.remove()};window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);</script><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa%3A400%2C%7CMontserrat%3A700%2C%7CRoboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto%20Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CChanga%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&#038;display=swap" /><link rel="stylesheet" href="https://jawahirfreefire.mobi/wp-content/cache/min/1/727bd74e3779d8c64113de3526e8bde1.css" media="all" data-minify="1" /></noscript></body>
+</html>
+
+<!-- This website is like a Rocket, isn't it? Performance optimized by WP Rocket. Learn more: https://wp-rocket.me - Debug: cached@1676094564 -->
